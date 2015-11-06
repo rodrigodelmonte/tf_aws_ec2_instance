@@ -15,6 +15,7 @@ Module Input Variables
 - `instance_name` - The instance name you want, this is used to populate
     the Name tag.
 - `user_data` - The path to the user_data file. Terraform will include the contents of this file while launching the instance
+- `security_groups` - The security group ID.
 - `tags` - A map for setting AWS tags.
 
 Usage
@@ -35,6 +36,7 @@ module "ec2_instance" {
   aws_region = "${var.aws_region}"
   subnet_id = "${var.subnet_id}"
   number_of_instances = "${var.number_of_instances}"
+  security_groups = "{var.security_groups}"
   user_data = "{var.user_data}"
 }
 ```
@@ -52,7 +54,7 @@ module "ec2_instance" {
 
 Authors
 =======
-
+This repository was forked from [terraform-community-modules](https://github.com/terraform-community-modules/tf_aws_ec2_instance)
 Created and maintained by [Brandon Burton](https://github.com/solarce)
 (brandon@inatree.org).
 

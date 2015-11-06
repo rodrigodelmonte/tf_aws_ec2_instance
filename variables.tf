@@ -19,6 +19,10 @@ variable "number_of_instances" {
   default = 1
 }
 
+variable "security_groups" {
+  description = "The security group ID"
+}
+
 variable "user_data" {
   description = "The path to a file with user_data for the instances"
 }
