@@ -50,6 +50,7 @@ module "ec2_instance" {
 - instance_type
 - subnet_id
 - ami_id
+- security_groups
 - number_of_instances
 
 Authors
